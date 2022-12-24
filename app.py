@@ -112,14 +112,17 @@ elif nav=="DATA ANALYZE":
 
     
     st.markdown("<h1 style='text-align:center; color:white;'>GRAPH</h1>",True)
-    x_label=st.selectbox('CHOOSE THE X-AXIS LABEL',('yearsofexperience','yearsatcompany','gender',
-                        'basesalary'))
-    y_label=st.selectbox('CHOOSE THE Y-AXIS LABEL',('Amazon','Apple','Facebook','Google','Microsoft',
-                        'Business Analyst','Data Scientist', 'Hardware Engineer', 'Human Resources',
-                        'Management Consultant', 'Marketing', 'Mechanical Engineer',
-                        'Product Designer', 'Product Manager', 'Recruiter', 'Sales',
-                        'Software Engineer', 'Software Engineering Manager',
-                        'Solution Architect', 'Technical Program Manager'))
+    left_col,right_col=st.columns(2)
+    with left_col:
+        x_label=st.selectbox('CHOOSE THE X-AXIS LABEL',('yearsofexperience','yearsatcompany','gender',
+                            'basesalary'))
+    with right_col:
+        y_label=st.selectbox('CHOOSE THE Y-AXIS LABEL',('Amazon','Apple','Facebook','Google','Microsoft',
+                            'Business Analyst','Data Scientist', 'Hardware Engineer', 'Human Resources',
+                            'Management Consultant', 'Marketing', 'Mechanical Engineer',
+                            'Product Designer', 'Product Manager', 'Recruiter', 'Sales',
+                            'Software Engineer', 'Software Engineering Manager',
+                            'Solution Architect', 'Technical Program Manager'))
     if (len(x_label)!=0 and len(y_label)!=0):    
         st.bar_chart(df2,x=x_label,y=y_label)
     
