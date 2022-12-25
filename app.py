@@ -115,9 +115,15 @@ elif nav=="DATA ANALYZE":
     left_col,right_col=st.columns(2)
     with left_col:
         x_label=st.selectbox('CHOOSE THE X-AXIS LABEL',('yearsofexperience','yearsatcompany','gender',
-                            'basesalary'))
+                            'basesalary','Amazon','Apple','Facebook','Google','Microsoft',
+                            'Business Analyst','Data Scientist', 'Hardware Engineer', 'Human Resources',
+                            'Management Consultant', 'Marketing', 'Mechanical Engineer',
+                            'Product Designer', 'Product Manager', 'Recruiter', 'Sales',
+                            'Software Engineer', 'Software Engineering Manager',
+                            'Solution Architect', 'Technical Program Manager'))
     with right_col:
         y_label=st.selectbox('CHOOSE THE Y-AXIS LABEL',('Amazon','Apple','Facebook','Google','Microsoft',
+                            'yearsofexperience','yearsatcompany','gender','basesalary',
                             'Business Analyst','Data Scientist', 'Hardware Engineer', 'Human Resources',
                             'Management Consultant', 'Marketing', 'Mechanical Engineer',
                             'Product Designer', 'Product Manager', 'Recruiter', 'Sales',
